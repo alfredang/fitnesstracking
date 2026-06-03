@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PulseFit — Smart Fitness Tracking & Gym</title>
+  <meta name="description" content="PulseFit is a premium fitness tracking app and gym brand. Join classes, track your progress, follow guided diet programs, and book sessions across our branches." />
+  <meta name="theme-color" content="#2563eb" />
+
+  <!-- NOTE: replace https://www.pulsefit.com with your real domain before launch -->
+  <link rel="canonical" href="https://www.pulsefit.com/" />
+
+  <!-- Favicon (inline SVG of the pulse logo mark — no extra file, works offline) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%232563eb'/%3E%3Cpath d='M3 12h3l2-5 4 14 3-9 2 3h4' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PulseFit" />
+  <meta property="og:url" content="https://www.pulsefit.com/" />
+  <meta property="og:title" content="PulseFit — Smart Fitness Tracking & Gym" />
+  <meta property="og:description" content="Track workouts, join classes, follow diet programs, and book sessions — all in one premium fitness platform." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:image:alt" content="Athlete training at a PulseFit gym" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PulseFit — Smart Fitness Tracking & Gym" />
+  <meta name="twitter:description" content="Track workouts, join classes, follow diet programs, and book sessions — all in one premium fitness platform." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Fonts + LCP hero image preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=80" fetchpriority="high" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Structured data: gym as a LocalBusiness with branch locations -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "@id": "https://www.pulsefit.com/#organization",
+    "name": "PulseFit",
+    "description": "Premium fitness tracking app and gym brand offering classes, diet programs, and progress tracking across five branches.",
+    "url": "https://www.pulsefit.com/",
+    "logo": "https://www.pulsefit.com/logo.png",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    "priceRange": "$$",
+    "sameAs": [
+      "https://facebook.com",
+      "https://instagram.com",
+      "https://twitter.com",
+      "https://youtube.com"
+    ],
+    "location": [
+      { "@type": "Place", "name": "Downtown Fitness Center", "address": "120 Market St, Downtown", "telephone": "+1-555-100-2200" },
+      { "@type": "Place", "name": "Eastside Fitness Hub", "address": "44 River Ave, Eastside", "telephone": "+1-555-100-3300" },
+      { "@type": "Place", "name": "West End Gym", "address": "8 Sunset Blvd, West End", "telephone": "+1-555-100-4400" },
+      { "@type": "Place", "name": "North Wellness Center", "address": "210 Pine Rd, Northside", "telephone": "+1-555-100-5500" },
+      { "@type": "Place", "name": "South Performance Club", "address": "77 Stadium Way, Southside", "telephone": "+1-555-100-6600" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#hero">Skip to content</a>
+
+  <!-- ============================== NAVBAR ============================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="logo" aria-label="PulseFit home">
+        <svg class="logo-mark" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+          <path d="M3 12h3l2-5 4 14 3-9 2 3h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo-text">Pulse<span>Fit</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#hero">Home</a>
+        <a href="#membership">Membership</a>
+        <a href="#classes">Classes</a>
+        <a href="#dietary">Dietary Programs</a>
+        <a href="#branches">Branches</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="23"/><line x1="1" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="23" y2="12"/><line x1="4.2" y1="4.2" x2="6.3" y2="6.3"/><line x1="17.7" y1="17.7" x2="19.8" y2="19.8"/><line x1="4.2" y1="19.8" x2="6.3" y2="17.7"/><line x1="17.7" y1="6.3" x2="19.8" y2="4.2"/></g></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow reveal">Smart fitness, made personal</p>
+        <h1 class="reveal">Train Smarter.<br />Live Stronger.</h1>
+        <p class="hero-sub reveal">Track every workout, join expert-led classes, follow tailored diet plans, and reach your goals with PulseFit — your all-in-one fitness companion.</p>
+        <div class="hero-cta reveal">
+          <a href="#membership" class="btn btn-primary">Join Now</a>
+          <a href="#contact" class="btn btn-ghost">Book Free Trial</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat-card glass">
+            <span class="stat-num" data-count="12500" data-suffix="+">0</span>
+            <span class="stat-label">Active Members</span>
+          </div>
+          <div class="stat-card glass">
+            <span class="stat-num" data-count="85" data-suffix="+">0</span>
+            <span class="stat-label">Expert Trainers</span>
+          </div>
+          <div class="stat-card glass">
+            <span class="stat-num" data-count="40" data-suffix="+">0</span>
+            <span class="stat-label">Classes Available</span>
+          </div>
+          <div class="stat-card glass">
+            <span class="stat-num" data-count="5" data-suffix="">0</span>
+            <span class="stat-label">Branches</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== MEMBERSHIP ============================== -->
+    <section class="section" id="membership">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Membership</p>
+          <h2>Pick the plan that fits your goals</h2>
+          <p class="section-sub">Flexible memberships with everything you need — no contracts, cancel anytime.</p>
+        </header>
+
+        <div class="grid grid-3 pricing">
+          <article class="card price-card reveal">
+            <h3>Basic</h3>
+            <p class="price"><span>$29</span>/mo</p>
+            <ul class="features">
+              <li>Gym Access</li>
+              <li>Fitness Tracking</li>
+              <li>Mobile App Access</li>
+            </ul>
+            <button class="btn btn-ghost btn-block" data-join="Basic">Join Now</button>
+          </article>
+
+          <article class="card price-card featured reveal">
+            <span class="badge">Most Popular</span>
+            <h3>Premium</h3>
+            <p class="price"><span>$59</span>/mo</p>
+            <ul class="features">
+              <li>Everything in Basic</li>
+              <li>Group Classes</li>
+              <li>Diet Consultation</li>
+            </ul>
+            <button class="btn btn-primary btn-block" data-join="Premium">Join Now</button>
+          </article>
+
+          <article class="card price-card reveal">
+            <h3>Elite</h3>
+            <p class="price"><span>$99</span>/mo</p>
+            <ul class="features">
+              <li>Everything in Premium</li>
+              <li>Personal Trainer</li>
+              <li>Advanced Nutrition Program</li>
+              <li>Priority Booking</li>
+            </ul>
+            <button class="btn btn-ghost btn-block" data-join="Elite">Join Now</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CLASSES ============================== -->
+    <section class="section alt" id="classes">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Classes</p>
+          <h2>Find your favorite workout</h2>
+          <p class="section-sub">From high-intensity burns to mindful flows — led by certified trainers.</p>
+        </header>
+        <div class="grid grid-3" id="classesGrid">
+          <!-- Class cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== DIETARY PROGRAMS ============================== -->
+    <section class="section" id="dietary">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Dietary Programs</p>
+          <h2>Nutrition that works with your training</h2>
+          <p class="section-sub">Personalized meal planning and tracking to fuel your results.</p>
+        </header>
+
+        <div class="grid grid-3">
+          <article class="card diet-card reveal">
+            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80" alt="Colorful healthy salad bowl for the weight loss program" width="600" height="375" loading="lazy" />
+            <div class="card-body">
+              <h3>Weight Loss Program</h3>
+              <ul class="features">
+                <li>Calorie tracking</li>
+                <li>Meal recommendations</li>
+                <li>Progress monitoring</li>
+              </ul>
+              <button class="btn btn-primary btn-block" data-enroll="Weight Loss Program">Enroll</button>
+            </div>
+          </article>
+
+          <article class="card diet-card reveal">
+            <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=600&q=80" alt="High-protein meal prep containers for the muscle gain program" width="600" height="375" loading="lazy" />
+            <div class="card-body">
+              <h3>Muscle Gain Program</h3>
+              <ul class="features">
+                <li>Protein-focused meal plans</li>
+                <li>Macronutrient tracking</li>
+                <li>Strength-aligned nutrition</li>
+              </ul>
+              <button class="btn btn-primary btn-block" data-enroll="Muscle Gain Program">Enroll</button>
+            </div>
+          </article>
+
+          <article class="card diet-card reveal">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Fresh vegetables and a balanced meal for the healthy lifestyle program" width="600" height="375" loading="lazy" />
+            <div class="card-body">
+              <h3>Healthy Lifestyle Program</h3>
+              <ul class="features">
+                <li>Balanced nutrition</li>
+                <li>Wellness guidance</li>
+                <li>Sustainable habits</li>
+              </ul>
+              <button class="btn btn-primary btn-block" data-enroll="Healthy Lifestyle Program">Enroll</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== BRANCHES ============================== -->
+    <section class="section alt" id="branches">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Branches</p>
+          <h2>Find a club near you</h2>
+          <p class="section-sub">Five locations and counting — search or pick a branch to see details.</p>
+        </header>
+
+        <div class="branch-tools reveal">
+          <input type="search" id="branchSearch" class="input" placeholder="Search by name or area…" aria-label="Search branches" />
+          <select id="branchSelect" class="input" aria-label="Select a branch"></select>
+        </div>
+
+        <div class="branch-details card reveal" id="branchDetails" aria-live="polite">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== DASHBOARD PREVIEW ============================== -->
+    <section class="section" id="dashboard">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Tracking Dashboard</p>
+          <h2>Every metric that matters, in one place</h2>
+          <p class="section-sub">A glimpse of your PulseFit dashboard — live, animated, motivating.</p>
+        </header>
+
+        <div class="grid grid-3 dash-grid">
+          <div class="card metric reveal">
+            <div class="ring" data-percent="78" style="--clr:#2563eb"><span class="ring-val">0%</span></div>
+            <h3>Daily Steps</h3><p class="metric-sub">9,750 / 12,500</p>
+          </div>
+          <div class="card metric reveal">
+            <div class="ring" data-percent="64" style="--clr:#f97316"><span class="ring-val">0%</span></div>
+            <h3>Calories Burned</h3><p class="metric-sub">640 / 1,000 kcal</p>
+          </div>
+          <div class="card metric reveal">
+            <div class="ring" data-percent="50" style="--clr:#22c55e"><span class="ring-val">0%</span></div>
+            <h3>Workout Duration</h3><p class="metric-sub">45 / 90 min</p>
+          </div>
+
+          <div class="card metric bar-card reveal">
+            <h3>Water Intake</h3>
+            <div class="bar"><span class="bar-fill" data-percent="80" style="--clr:#38bdf8"></span></div>
+            <p class="metric-sub">2.0 / 2.5 L</p>
+          </div>
+          <div class="card metric bar-card reveal">
+            <h3>Weight Progress</h3>
+            <div class="bar"><span class="bar-fill" data-percent="62" style="--clr:#a855f7"></span></div>
+            <p class="metric-sub">−6.2 kg of 10 kg goal</p>
+          </div>
+          <div class="card metric bar-card reveal">
+            <h3>BMI Tracking</h3>
+            <div class="bar"><span class="bar-fill" data-percent="71" style="--clr:#10b981"></span></div>
+            <p class="metric-sub">23.4 — Healthy range</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== BOOKING FORM ============================== -->
+    <section class="section alt" id="contact">
+      <div class="container narrow">
+        <header class="section-head reveal">
+          <p class="eyebrow">Book a Session</p>
+          <h2>Reserve your spot or free trial</h2>
+          <p class="section-sub">Fill in your details and we'll confirm your booking by email.</p>
+        </header>
+
+        <form class="card booking-form reveal" id="bookingForm" novalidate>
+          <fieldset>
+            <legend>Personal Information</legend>
+            <div class="form-row">
+              <div class="field">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" autocomplete="name" required />
+                <small class="error" data-for="fullName"></small>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required />
+                <small class="error" data-for="email"></small>
+              </div>
+              <div class="field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" required />
+                <small class="error" data-for="phone"></small>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Booking Details</legend>
+            <div class="form-row">
+              <div class="field">
+                <label for="branchField">Preferred Branch</label>
+                <select id="branchField" name="branch" required></select>
+                <small class="error" data-for="branch"></small>
+              </div>
+              <div class="field">
+                <label for="classField">Fitness Class</label>
+                <select id="classField" name="class" required></select>
+                <small class="error" data-for="class"></small>
+              </div>
+              <div class="field">
+                <label for="trainerField">Trainer</label>
+                <select id="trainerField" name="trainer">
+                  <option value="">No preference</option>
+                  <option>Sarah Lopez</option>
+                  <option>Marcus Reed</option>
+                  <option>Aisha Khan</option>
+                  <option>David Chen</option>
+                  <option>Elena Rossi</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="dateField">Date</label>
+                <input type="date" id="dateField" name="date" required />
+                <small class="error" data-for="date"></small>
+              </div>
+              <div class="field">
+                <label for="timeField">Time Slot</label>
+                <select id="timeField" name="time" required>
+                  <option value="">Select a time</option>
+                  <option>06:00 – 07:00</option>
+                  <option>08:00 – 09:00</option>
+                  <option>12:00 – 13:00</option>
+                  <option>17:00 – 18:00</option>
+                  <option>19:00 – 20:00</option>
+                </select>
+                <small class="error" data-for="time"></small>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="notes">Additional Notes</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Any goals, injuries, or requests…"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Confirm Booking</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============================== TESTIMONIALS ============================== -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Testimonials</p>
+          <h2>Real members, real results</h2>
+        </header>
+
+        <div class="carousel reveal" id="carousel">
+          <button class="carousel-btn prev" id="prevBtn" aria-label="Previous testimonial">&#8249;</button>
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="carouselTrack"><!-- Slides injected by JS --></div>
+          </div>
+          <button class="carousel-btn next" id="nextBtn" aria-label="Next testimonial">&#8250;</button>
+          <div class="dots" id="dots" role="tablist" aria-label="Choose testimonial"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CTA BAND ============================== -->
+    <section class="cta-band">
+      <div class="cta-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="container cta-inner reveal">
+        <h2>Transform Your Fitness Journey Today</h2>
+        <p>Join thousands who train smarter with PulseFit. Your first week is on us.</p>
+        <div class="hero-cta">
+          <a href="#membership" class="btn btn-light">Join Membership</a>
+          <a href="#contact" class="btn btn-ghost-light">Book Free Trial</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="footer" id="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="#hero" class="logo logo-footer" aria-label="PulseFit home">
+          <svg class="logo-mark" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M3 12h3l2-5 4 14 3-9 2 3h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="logo-text">Pulse<span>Fit</span></span>
+        </a>
+        <p class="footer-about">Smart fitness tracking, expert classes, and tailored nutrition — helping you become your strongest self since 2018.</p>
+        <div class="socials">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 3.2A6.6 6.6 0 1 0 18.6 12 6.6 6.6 0 0 0 12 5.4zm0 10.9A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.8-11.1a1.5 1.5 0 1 1-1.5-1.5 1.5 1.5 0 0 1 1.5 1.5z"/></svg></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="X / Twitter"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-7.3 8.3L23 22h-6.8l-5.3-6.9L4.8 22H1.7l7.8-8.9L1 2h7l4.8 6.3zm-1.2 18h1.7L7.4 3.8H5.6z"/></svg></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M23 12s0-3.3-.4-4.8a2.5 2.5 0 0 0-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.4a2.5 2.5 0 0 0-1.8 1.8C1 8.7 1 12 1 12s0 3.3.4 4.8a2.5 2.5 0 0 0 1.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.4a2.5 2.5 0 0 0 1.8-1.8C23 15.3 23 12 23 12zM9.8 15.3V8.7l5.7 3.3z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#membership">Membership</a></li>
+          <li><a href="#classes">Classes</a></li>
+          <li><a href="#dietary">Dietary Programs</a></li>
+          <li><a href="#branches">Branches</a></li>
+          <li><a href="#contact">Book a Session</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Company</h3>
+        <ul class="footer-links">
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#hero">About</a></li>
+          <li><a href="#footer">Careers</a></li>
+          <li><a href="#footer">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Newsletter</h3>
+        <p class="footer-about">Get fitness tips and member-only offers in your inbox.</p>
+        <form class="newsletter" id="newsletterForm" novalidate>
+          <input type="email" id="newsletterEmail" placeholder="Your email" aria-label="Email address" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <small class="error" data-for="newsletter"></small>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="year">2026</span> PulseFit. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Facebook button -->
+  <a class="fab-facebook" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit our Facebook page">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+  </a>
+
+  <!-- Toast container -->
+  <div class="toast-wrap" id="toastWrap" aria-live="assertive"></div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# PulseFit robots.txt
+# Replace the domain below with your real domain before launch.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.pulsefit.com/sitemap.xml
