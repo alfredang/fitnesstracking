@@ -321,7 +321,11 @@ ul { list-style: none; }
 .newsletter { display: flex; gap: 0.5rem; margin-bottom: 0.4rem; }
 .newsletter input { flex: 1; padding: 0.7rem 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--surface); color: var(--text); }
 .newsletter input:focus { outline: none; border-color: var(--accent); }
-.footer-bottom { border-top: 1px solid var(--border); padding: 1.3rem 0; text-align: center; color: var(--muted); font-size: 0.88rem; }
+.footer-bottom { border-top: 1px solid var(--border); padding: 1.3rem 0; color: var(--muted); font-size: 0.88rem; }
+.footer-bottom-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.4rem 1rem; }
+.powered-by a { color: var(--accent); font-weight: 600; transition: color 0.2s ease; }
+.powered-by a:hover { text-decoration: underline; }
+@media (max-width: 560px) { .footer-bottom-inner { flex-direction: column; text-align: center; } }
 
 /* ---------- Floating Facebook button ---------- */
 .fab-facebook {
